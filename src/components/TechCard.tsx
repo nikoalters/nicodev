@@ -1,24 +1,30 @@
-import { type ReactNode, type CSSProperties } from 'react'; // <--- 1. Corregimos el import
+import { type ReactNode, type CSSProperties } from 'react';
 import './TechCard.css';
 
 interface TechCardProps {
   children: ReactNode;
   title?: string;
   className?: string;
-  style?: CSSProperties; // <--- 2. Aceptamos estilos personalizados (como el maxWidth)
+  style?: CSSProperties;
+  variant?: 'cyan' | 'purple' | 'green'; // <--- Nueva propiedad de color
 }
 
-const TechCard = ({ children, title, className = "", style }: TechCardProps) => {
+const TechCard = ({ children, title, className = "", style, variant = 'cyan' }: TechCardProps) => {
+  // Asignamos la clase de color basada en la variante
+  const colorClass = `card-${variant}`;
+
   return (
-    // 3. Pasamos el estilo al div
-    <div className={`tech-card-container ${className}`} style={style}> 
-      <div className="glow-line"></div>
+    <div className={`tech-card-container ${colorClass} ${className}`} style={style}>
       
-      {title && <h3 className="tech-card-title">{title}</h3>}
-      
-      <div className="tech-card-content">
-        {children}
+      {/* Contenedor interno (la tapa oscura) */}
+      <div className="tech-card-inner">
+        {title && <h3 className="tech-card-title">{title}</h3>}
+        
+        <div className="tech-card-content">
+          {children}
+        </div>
       </div>
+
     </div>
   );
 };

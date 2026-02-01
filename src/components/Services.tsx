@@ -9,21 +9,24 @@ const Services = () => {
       icon: "💻", 
       description: "Sitios web modernos y tiendas online.",
       link: "/web", // <--- Esta es la ruta a la página de precios Web
-      details: ["Ver Precios Landing Pages", "Ver Planes E-commerce"],
+          details: ["Ver Precios Landing Pages", "Ver Planes E-commerce"],
+      color: "cyan" as const
     },
     {
       title: "Soporte Técnico & OS",
       icon: "🛠️",
       description: "Mantenimiento y formateo.",
       link: "/soporte", // <--- Ruta a la página de Soporte
-      details: ["Ver Costo Formateo", "Instalación Office"],
+        details: ["Ver Costo Formateo", "Instalación Office"],
+      color: "purple" as const
     },
     {
       title: "Automatización & IoT",
   icon: "🤖",
   description: "Soluciones inteligentes.",
   link: "/automatizacion", // <--- AQUI CAMBIAMOS LA RUTA
-  details: ["Control de Persianas", "Luces LED Wifi", "Google Home"],
+        details: ["Control de Persianas", "Luces LED Wifi", "Google Home"],
+  color: "green" as const
     }
   ];
 

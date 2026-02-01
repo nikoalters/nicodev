@@ -1,71 +1,115 @@
+/* Contenedor principal de la tarjeta */
 .tech-card-container {
-    /* La base del estilo Glassmorphism */
-    background: rgba(20, 20, 25, 0.6);
-    /* Oscuro y transparente */
-    backdrop-filter: blur(12px);
-    /* El efecto vidrio borroso */
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    /* Borde sutil casi invisible */
-    border-radius: 12px;
-    padding: 2rem;
     position: relative;
+    border-radius: 16px;
+    background: rgba(20, 20, 25, 1);
+    /* Fondo oscuro base */
     overflow: hidden;
-    /* Para que la luz no se salga de la tarjeta */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* Animación suave */
-
-    /* Sombra inicial suave */
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    /* Para que el brillo no se salga */
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    /* Este espacio es el GROSOR del borde brillante */
+    transition: transform 0.3s ease;
+    height: 100%;
 }
 
-/* --- ESTADO HOVER (Cuando pasas el mouse) --- */
 .tech-card-container:hover {
-    transform: translateY(-8px) scale(1.02);
-    /* Se levanta y crece un pelín */
-    border-color: var(--neon-cyan, #00f3ff);
-    /* El borde se pone Cian */
-
-    /* El resplandor neón potente */
-    box-shadow:
-        0 20px 40px -10px rgba(0, 0, 0, 0.6),
-        0 0 20px rgba(0, 243, 255, 0.2),
-        /* Glow interior */
-        0 0 0 1px rgba(0, 243, 255, 0.3);
-    /* Borde extra brillante */
-
-    background: rgba(25, 25, 35, 0.8);
-    /* Se vuelve un poco más sólido para leer mejor */
+    transform: translateY(-5px);
 }
 
-/* La línea decorativa superior */
-.glow-line {
+/* --- LA MAGIA: El borde giratorio --- */
+.tech-card-container::before {
+    content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--neon-purple, #bd00ff), transparent);
-    opacity: 0.5;
-    transition: opacity 0.3s;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent,
+            transparent,
+            transparent,
+            var(--card-color)
+            /* El color final del brillo */
+        );
+    animation: spin 4s linear infinite;
+    /* La animación de giro */
+    z-index: 0;
 }
 
-.tech-card-container:hover .glow-line {
-    opacity: 1;
-    background: linear-gradient(90deg, transparent, var(--neon-cyan, #00f3ff), transparent);
-    box-shadow: 0 0 10px var(--neon-cyan, #00f3ff);
+/* Una segunda capa para suavizar el giro */
+.tech-card-container::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent,
+            transparent,
+            transparent,
+            var(--card-color));
+    animation: spin 4s linear infinite;
+    animation-delay: -2s;
+    /* Desfase para que se vea continuo */
+    z-index: 0;
 }
 
-/* Título */
+/* Animación de rotación */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- El contenido INTERNO (Tapa oscura) --- */
+.tech-card-inner {
+    background: rgba(10, 10, 12, 0.95);
+    /* El fondo real de la tarjeta */
+    border-radius: 14px;
+    /* Un poco menos que el padre */
+    position: relative;
+    z-index: 1;
+    /* Para estar encima del brillo */
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centrar todo */
+    text-align: center;
+}
+
+/* Títulos y Textos */
 .tech-card-title {
     color: #fff;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 .tech-card-content {
     color: #a0a0b0;
-    /* Texto grisáceo tech */
+    font-size: 0.95rem;
     line-height: 1.6;
+    width: 100%;
+}
+
+/* --- COLORES ESPECÍFICOS --- */
+/* Estas clases las usaremos en el componente */
+.card-cyan {
+    --card-color: #00f3ff;
+}
+
+.card-purple {
+    --card-color: #bd00ff;
+}
+
+.card-green {
+    --card-color: #00ff41;
 }
