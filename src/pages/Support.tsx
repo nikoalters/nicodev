@@ -15,45 +15,44 @@ const Support = () => {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           
-          {/* CARD 1: FORMATEO (Color CIAN) */}
+         
           <TechCard title="Formateo Completo" variant="cyan">
             <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#fff', marginBottom: '1rem' }}>$20.000</div>
             <p style={{ marginBottom: '1.5rem' }}>Dejar tu PC como nuevo, rápido y limpio.</p>
             <ul style={{ listStyle: 'none', padding: 0, color: '#a0a0b0', lineHeight: '1.8' }}>
               <li>✅ Instalación de Windows 10/11</li>
-              <li>✅ Respaldo de archivos (hasta 20GB)</li>
+              <li>✅ Respaldo de archivos (hasta 15GB)</li>
               <li>✅ Instalación de Drivers</li>
               <li>✅ Antivirus Básico</li>
             </ul>
             
-            {/* BOTÓN 1 */}
+          
             <a 
               href="https://wa.me/56958547236?text=Hola%20Nico,%20necesito%20formatear%20mi%20PC"
               target="_blank"
               className="btn-hire"
             >
-              Agendar 🛠️
+              Agendar 
             </a>
           </TechCard>
 
-          {/* CARD 2: OFFICE (Color PÚRPURA) */}
+         
           <TechCard title="Pack Office 365" variant="purple">
             <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#fff', marginBottom: '1rem' }}>$15.000</div>
             <p style={{ marginBottom: '1.5rem' }}>Licencia permanente y programas listos.</p>
             <ul style={{ listStyle: 'none', padding: 0, color: '#a0a0b0', lineHeight: '1.8' }}>
               <li>✅ Word, Excel, PowerPoint</li>
               <li>✅ Licencia activada de por vida</li>
-              <li>✅ Soporte remoto incluido</li>
               <li>✅ Instalación en 30 min</li>
             </ul>
 
-            {/* BOTÓN 2 (Con estilo purple) */}
+           
             <a 
               href="https://wa.me/56958547236?text=Hola%20Nico,%20quiero%20instalar%20Office%20365"
               target="_blank"
               className="btn-hire purple"
             >
-              Instalar Ahora 📄
+              Instalar Ahora 
             </a>
           </TechCard>
 
