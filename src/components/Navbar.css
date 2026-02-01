@@ -1,57 +1,68 @@
-/* Estilos Base (PC) */
+/* Estilos Base (PC - Escritorio) */
 .tech-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(5, 5, 5, 0.85);
+    background: rgba(5, 5, 5, 0.9);
     /* Fondo oscuro semitransparente */
-    backdrop-filter: blur(15px);
-    /* Efecto vidrio fuerte */
+    backdrop-filter: blur(10px);
+    /* Efecto vidrio */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-    /* Evita que el padding agrande el ancho */
+
+    /* MEDIDAS COMPACTAS */
+    height: 70px;
+    padding: 0 2rem;
+    /* Padding solo a los lados, la altura la controla 'height' */
+    display: flex;
+    align-items: center;
 }
 
 .tech-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .logo {
     font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
+    font-size: 1.3rem;
+    /* Tamaño controlado */
+    letter-spacing: -0.5px;
     background: linear-gradient(90deg, #00f3ff, #bd00ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .logo span {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 0;
     color: #fff;
     -webkit-text-fill-color: #fff;
+    margin-top: -5px;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 0.85rem;
+    /* Texto fino y elegante */
+    opacity: 0.7;
     font-family: monospace;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -62,8 +73,8 @@
 
 .menu-toggle {
     display: none;
-    /* En PC no se ve */
-    font-size: 1.8rem;
+    /* Oculto en PC */
+    font-size: 1.5rem;
     color: white;
     cursor: pointer;
 }
@@ -71,37 +82,38 @@
 /* --- ESTILOS PARA MÓVIL (Pantallas menores a 768px) --- */
 @media (max-width: 768px) {
     .tech-header {
-        padding: 1rem 1.5rem;
+        height: 60px;
+        /* Más delgado en celular */
+        padding: 0 1.5rem;
     }
 
     .menu-toggle {
         display: block;
-        /* Muestra el botón ☰ */
+        /* Aparece el botón */
     }
 
-    /* El menú desplegable */
+    /* Menú desplegable móvil */
     .nav-links {
         position: absolute;
-        top: 100%;
+        top: 60px;
         /* Justo debajo del header */
         left: 0;
         width: 100%;
         background: rgba(10, 10, 15, 0.98);
-        /* Fondo casi negro */
+        /* Fondo casi negro sólido */
         border-bottom: 1px solid rgba(0, 243, 255, 0.2);
 
         flex-direction: column;
-        /* Lista vertical */
         align-items: center;
         padding: 2rem 0;
         gap: 2rem;
 
-        /* Oculto por defecto */
+        /* Estado cerrado */
         display: none;
         opacity: 0;
     }
 
-    /* Clase que se agrega al abrir el menú */
+    /* Estado abierto (cuando isOpen es true) */
     .nav-links.open {
         display: flex;
         opacity: 1;
@@ -109,11 +121,13 @@
     }
 
     .nav-links a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         /* Letra más grande para tocar con el dedo */
+        opacity: 1;
     }
 }
 
+/* Animación de apertura suave */
 @keyframes slideDown {
     from {
         opacity: 0;

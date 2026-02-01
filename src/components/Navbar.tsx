@@ -7,17 +7,17 @@ const Navbar = () => {
   return (
     <header className="tech-header">
       <nav className="tech-nav">
-       
-        <div className="logo">
+        {/* Logo */}
+        <div className="logo" onClick={() => window.scrollTo(0, 0)}>
           NICODEV<span>.</span>
         </div>
 
-        
+        {/* Botón Hamburguesa (Solo visible en móvil) */}
         <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? '✕' : '☰'}
         </div>
 
-        
+        {/* Enlaces */}
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
           <a href="#inicio" onClick={() => setIsOpen(false)}>// INICIO</a>
           <a href="#servicios" onClick={() => setIsOpen(false)}>// SERVICIOS</a>
