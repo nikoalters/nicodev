@@ -3,22 +3,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8rem 2rem 4rem;
-    min-height: 90vh;
+    /* Reduje el padding superior de 8rem a 6rem */
+    padding: 6rem 2rem 3rem;
+    min-height: 85vh;
+    /* Un poco menos de altura para que quepa mejor */
     position: relative;
+    max-width: 1100px;
+    /* IMPORTANTE: Esto evita que se estire infinito a los lados */
+    margin: 0 auto;
+    /* Esto lo centra */
 }
 
 @media (min-width: 768px) {
     .hero-container {
         flex-direction: row;
-        gap: 4rem;
-        padding: 6rem 8rem;
-        /* Más aire a los lados */
+        gap: 3rem;
+        /* Menos espacio entre texto y tarjeta */
+        padding: 5rem 2rem;
+        text-align: left;
     }
 
     .hero-content {
         flex: 1;
-        text-align: left;
     }
 
     .hero-showcase {
@@ -30,54 +36,59 @@
 
 /* Efecto de Texto Brillante */
 .hero-content h1 {
-    font-size: 3.5rem;
+    /* Reduje de 3.5rem a 2.8rem */
+    font-size: 2.8rem;
     font-weight: 800;
     letter-spacing: -1px;
     background: linear-gradient(90deg, #fff, #a5a5a5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
+    line-height: 1.2;
+    /* Para que las líneas no se separen tanto */
 }
 
 .highlight {
     color: var(--neon-cyan);
     -webkit-text-fill-color: var(--neon-cyan);
-    text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
-    /* RESPLANDOR */
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
 }
 
 .hero-content h2 {
     font-family: 'Courier New', monospace;
-    /* Fuente tipo código */
-    font-size: 1.2rem;
+    /* Reduje de 1.2rem a 1rem */
+    font-size: 1rem;
     color: var(--neon-purple);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
-    color: var(--text-dim);
-    max-width: 500px;
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    /* Texto un pelín más chico */
+    color: #a0a0b0;
+    /* Usar el gris tech directo */
+    max-width: 450px;
+    /* Limita el ancho del párrafo para que no se vea eterno */
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 /* Botones High Tech */
 .hero-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .btn {
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
+    /* Botones un poco más compactos */
     border-radius: 4px;
-    /* Bordes más cuadrados = más tech */
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -94,11 +105,11 @@
 .btn-primary:hover {
     background: var(--neon-cyan);
     color: black;
-    box-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
 }
 
 .btn-outline {
-    color: var(--text-dim);
+    color: #a0a0b0;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -107,70 +118,17 @@
     color: white;
 }
 
-/* Tarjeta Showcase Holográfica */
-.showcase-card {
-    background: rgba(255, 255, 255, 0.03);
-    /* Casi transparente */
-    backdrop-filter: blur(10px);
-    /* Desenfoque de fondo */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2.5rem;
-    border-radius: 12px;
-    max-width: 400px;
-    position: relative;
-    transition: transform 0.3s;
-}
-
-/* Linea decorativa arriba de la tarjeta */
-.showcase-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Ajuste específico para que la tarjeta de la derecha no sea gigante */
+.hero-showcase {
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
-}
-
-.showcase-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--neon-purple);
-    box-shadow: 0 10px 40px rgba(189, 0, 255, 0.15);
-}
-
-.badge {
-    background: rgba(0, 243, 255, 0.1);
-    color: var(--neon-cyan);
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-family: monospace;
-    border: 1px solid rgba(0, 243, 255, 0.3);
-}
-
-.showcase-placeholder {
-    background: linear-gradient(45deg, #111, #1a1a1a);
-    border: 1px dashed #333;
-    height: 180px;
-    border-radius: 8px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin: 1.5rem 0;
-    color: #555;
-    font-family: monospace;
+    /* En móvil centrada */
 }
 
-.btn-showcase {
-    display: block;
-    background: linear-gradient(90deg, var(--neon-purple), #9d00d6);
-    color: white;
-    padding: 1rem;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+@media (min-width: 768px) {
+    .hero-showcase {
+        justify-content: flex-end;
+        /* En PC a la derecha */
+    }
 }
