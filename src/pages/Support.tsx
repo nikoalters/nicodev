@@ -32,7 +32,14 @@ const Support = () => {
               <li>Word, Excel, PowerPoint</li>
               <li>Licencia activada</li>
               <li>Soporte remoto incluido</li>
-            </ul>
+                      </ul>
+                      <a 
+  href="https://wa.me/56958547236?text=Hola,%20necesito%20un%20Formateo%20de%20PC"
+  target="_blank"
+  className="btn-hire"
+>
+  Agendar 🛠️
+</a>
           </TechCard>
 
         </div>

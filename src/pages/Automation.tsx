@@ -57,7 +57,14 @@ const Automation = () => {
               <li>✅ Vinculación de cuentas (Spotify, Netflix)</li>
               <li>✅ Creación de Rutinas ("Modo Cine", "Buenos días")</li>
               <li>✅ Capacitación de uso</li>
-            </ul>
+              </ul>
+              <a 
+  href="https://wa.me/56958547236?text=Hola,%20necesito%20un%20Formateo%20de%20PC"
+  target="_blank"
+  className="btn-hire"
+>
+  pedir kit
+</a>  
           </TechCard>
 
         </div>

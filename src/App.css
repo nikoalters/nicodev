@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+/* --- BOTÓN DE CONTRATAR PLAN --- */
+.btn-hire {
+  display: block;
+  /* Para que ocupe el ancho disponible si queremos */
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid var(--neon-cyan, #00f3ff);
+  color: var(--neon-cyan, #00f3ff);
+  cursor: pointer;
+}
+
+/* Efecto Hover (al pasar el mouse) */
+.btn-hire:hover {
+  background: var(--neon-cyan, #00f3ff);
+  color: #000;
+  /* Letras negras para contraste */
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Variación Púrpura (para planes más caros) */
+.btn-hire.purple {
+  border-color: #bd00ff;
+  color: #bd00ff;
+}
+
+.btn-hire.purple:hover {
+  background: #bd00ff;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(189, 0, 255, 0.6);
+}
