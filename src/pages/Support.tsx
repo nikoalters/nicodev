@@ -22,7 +22,14 @@ const Support = () => {
               <li>Instalación de Windows 10/11</li>
               <li>Respaldo de archivos (hasta 20GB)</li>
               <li>Instalación de Drivers</li>
-            </ul>
+                      </ul>
+                      <a 
+  href="https://wa.me/56958547236?text=Hola,%20necesito%20un%20Formateo%20de%20PC"
+  target="_blank"
+  className="btn-hire"
+>
+  pedir kit
+</a>  
           </TechCard>
 
           <TechCard title="Pack Office 365">

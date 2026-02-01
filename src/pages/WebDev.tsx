@@ -78,7 +78,7 @@ const WebDev = () => {
             <a 
               href="https://wa.me/56958547236?text=Hola%20Nico,%20quiero%20cotizar%20una%20Tienda%20Online"
               target="_blank"
-              className="btn-hire"
+              className="btn-hire cyan"
             >
               Cotizar ahora 🛒
             </a>

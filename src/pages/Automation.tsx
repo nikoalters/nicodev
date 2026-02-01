@@ -28,7 +28,14 @@ const Automation = () => {
               <li>✅ Integración con Google Home / Alexa</li>
               <li>✅ Control desde el celular (App)</li>
               <li>✅ Efectos audiorítmicos</li>
-            </ul>
+                      </ul>
+                      <a 
+  href="https://wa.me/56958547236?text=Hola,%20necesito%20un%20Formateo%20de%20PC"
+  target="_blank"
+  className="btn-hire"
+>
+  pedir kit
+</a>  
           </TechCard>
 
           {/* PACK 2: PERSIANAS (Tu proyecto estrella) */}
@@ -43,7 +50,14 @@ const Automation = () => {
               <li>✅ "Hey Google, cierra la cortina"</li>
               <li>✅ Instalación oculta y estética</li>
               <li>✅ Incluye configuración de red</li>
-            </ul>
+              </ul>
+              <a 
+  href="https://wa.me/56958547236?text=Hola,%20necesito%20un%20Formateo%20de%20PC"
+  target="_blank"
+  className="btn-hire"
+>
+  pedir kit
+</a>          
           </TechCard>
 
           {/* PACK 3: CEREBRO HOGAR */}
