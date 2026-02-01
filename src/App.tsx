@@ -1,26 +1,38 @@
-import './App.css'
-import Services from './components/Services'
-import Hero from './components/Hero'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar' // <--- 1. Importamos el nuevo Navbar
+import { Routes, Route } from 'react-router-dom'; // Importamos el sistema de rutas
+import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-function App() {
+// Importamos las páginas nuevas
+import WebDev from './pages/WebDev';
+import Support from './pages/Support';
+
+// Creamos un componente "Home" para agrupar lo que ya tenías
+const Home = () => {
   return (
-    <div className="portfolio-container">
-      
-      {/* 2. Reemplazamos todo el <header> viejo por esto: */}
+    <>
       <Navbar />
-
       <main>
         <Hero />
         <Services />
         <Contact />
       </main>
-
       <Footer />
-    </div>
-  )
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/web" element={<WebDev />} />
+      <Route path="/soporte" element={<Support />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

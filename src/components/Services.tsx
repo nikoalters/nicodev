@@ -1,5 +1,6 @@
 import './Services.css';
-import TechCard from './TechCard'; // <--- Importamos nuestro componente maestro
+import TechCard from './TechCard'; 
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const servicesData = [
