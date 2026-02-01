@@ -3,7 +3,8 @@ import TechCard from './TechCard';
 
 const Hero = () => {
   // URL de la imagen de ejemplo. LUEGO LA CAMBIAREMOS POR LA TUYA.
-  const placeholderImage = "/perfumes-preview.jpg";
+  // Vite autocompleta la ruta base ('/' en local, '/nicodev/' en internet)
+const placeholderImage = `${import.meta.env.BASE_URL}perfumes-preview.jpg`;
 
   return (
     <section id="inicio" className="hero-container">

@@ -42,7 +42,9 @@ function App() {
         
         {/* Aquí siguen tus servicios */}
         <Services />
+        <Contact />
       </main>
+      
       <Footer />
     </div>
   )
