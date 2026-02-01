@@ -1,6 +1,7 @@
 import './App.css'
 import Services from './components/Services'
 import Hero from './components/Hero' 
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
