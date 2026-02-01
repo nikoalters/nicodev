@@ -1,0 +1,107 @@
+.tech-footer {
+    background: rgba(5, 5, 5, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Borde casi invisible */
+    padding: 4rem 2rem 2rem;
+    margin-top: auto;
+    /* Empuja el footer al fondo si hay poco contenido */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de luz ambiental en el footer (opcional, se ve genial) */
+.tech-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-purple), transparent);
+    opacity: 0.5;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
+}
+
+/* Marca */
+.neon-text {
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    color: white;
+}
+
+.footer-tagline {
+    color: var(--text-dim);
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Enlaces */
+.footer-links {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-link {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-family: monospace;
+    /* Fuente tipo código */
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tech-link:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.6);
+    /* Glow azul */
+    transform: translateY(-2px);
+}
+
+/* Pequeña linea debajo al hacer hover */
+.tech-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--neon-cyan);
+    transition: width 0.3s ease;
+}
+
+.tech-link:hover::after {
+    width: 100%;
+}
+
+/* Copyright */
+.footer-copyright {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.footer-copyright p {
+    color: #444;
+    font-size: 0.85rem;
+}
+
+.dimmed {
+    color: #333;
+}

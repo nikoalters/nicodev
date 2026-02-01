@@ -1,0 +1,79 @@
+.services-section {
+    padding: 6rem 2rem;
+    background: transparent;
+    /* Dejamos ver el fondo global tech */
+    position: relative;
+}
+
+/* Títulos con estilo Cyberpunk */
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #ffffff, #a0a0b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--neon-cyan, #00f3ff);
+    /* Subtítulo en neón */
+    margin-bottom: 4rem;
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+/* La Grilla */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    /* Más espacio entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos internos de la tarjeta */
+.icon-wrapper {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    filter: drop-shadow(0 0 15px rgba(0, 243, 255, 0.4));
+    /* Icono resplandeciente */
+}
+
+.service-description {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.tech-list li {
+    color: #a0a0b0;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+}
+
+/* Flechita tech antes de cada item */
+.tech-list li::before {
+    content: '>';
+    color: var(--neon-purple, #bd00ff);
+    margin-right: 10px;
+    font-weight: bold;
+}

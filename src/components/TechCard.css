@@ -1,0 +1,71 @@
+.tech-card-container {
+    /* La base del estilo Glassmorphism */
+    background: rgba(20, 20, 25, 0.6);
+    /* Oscuro y transparente */
+    backdrop-filter: blur(12px);
+    /* El efecto vidrio borroso */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Borde sutil casi invisible */
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    /* Para que la luz no se salga de la tarjeta */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Animación suave */
+
+    /* Sombra inicial suave */
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- ESTADO HOVER (Cuando pasas el mouse) --- */
+.tech-card-container:hover {
+    transform: translateY(-8px) scale(1.02);
+    /* Se levanta y crece un pelín */
+    border-color: var(--neon-cyan, #00f3ff);
+    /* El borde se pone Cian */
+
+    /* El resplandor neón potente */
+    box-shadow:
+        0 20px 40px -10px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(0, 243, 255, 0.2),
+        /* Glow interior */
+        0 0 0 1px rgba(0, 243, 255, 0.3);
+    /* Borde extra brillante */
+
+    background: rgba(25, 25, 35, 0.8);
+    /* Se vuelve un poco más sólido para leer mejor */
+}
+
+/* La línea decorativa superior */
+.glow-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-purple, #bd00ff), transparent);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.tech-card-container:hover .glow-line {
+    opacity: 1;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan, #00f3ff), transparent);
+    box-shadow: 0 0 10px var(--neon-cyan, #00f3ff);
+}
+
+/* Título */
+.tech-card-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.tech-card-content {
+    color: #a0a0b0;
+    /* Texto grisáceo tech */
+    line-height: 1.6;
+}
