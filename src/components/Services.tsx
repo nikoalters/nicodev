@@ -20,10 +20,10 @@ const Services = () => {
     },
     {
       title: "Automatización & IoT",
-      icon: "🤖",
-      description: "Soluciones inteligentes.",
-      link: "/contacto", // Si no tiene página de precio, lo mandamos al contacto
-      details: ["Cotizar Proyecto", "Domótica a medida"],
+  icon: "🤖",
+  description: "Soluciones inteligentes.",
+  link: "/automatizacion", // <--- AQUI CAMBIAMOS LA RUTA
+  details: ["Control de Persianas", "Luces LED Wifi", "Google Home"],
     }
   ];
 

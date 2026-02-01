@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import Automation from './pages/Automation';
 import Footer from './components/Footer';
 
 // Importamos las páginas nuevas
@@ -31,6 +32,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/web" element={<WebDev />} />
       <Route path="/soporte" element={<Support />} />
+      <Route path="/automatizacion" element={<Automation />} />
     </Routes>
   );
 }
