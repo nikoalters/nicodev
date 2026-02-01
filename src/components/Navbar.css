@@ -1,0 +1,127 @@
+/* Estilos Base (PC) */
+.tech-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.85);
+    /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(15px);
+    /* Efecto vidrio fuerte */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    /* Evita que el padding agrande el ancho */
+}
+
+.tech-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #00f3ff, #bd00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.logo span {
+    font-size: 2rem;
+    line-height: 0;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-family: monospace;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00f3ff;
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+
+.menu-toggle {
+    display: none;
+    /* En PC no se ve */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- ESTILOS PARA MÓVIL (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    .tech-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Muestra el botón ☰ */
+    }
+
+    /* El menú desplegable */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 15, 0.98);
+        /* Fondo casi negro */
+        border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+
+        flex-direction: column;
+        /* Lista vertical */
+        align-items: center;
+        padding: 2rem 0;
+        gap: 2rem;
+
+        /* Oculto por defecto */
+        display: none;
+        opacity: 0;
+    }
+
+    /* Clase que se agrega al abrir el menú */
+    .nav-links.open {
+        display: flex;
+        opacity: 1;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        /* Letra más grande para tocar con el dedo */
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
