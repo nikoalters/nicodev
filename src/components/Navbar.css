@@ -6,15 +6,10 @@
     width: 100%;
     z-index: 1000;
     background: rgba(5, 5, 5, 0.9);
-    /* Fondo oscuro semitransparente */
     backdrop-filter: blur(10px);
-    /* Efecto vidrio */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-    /* MEDIDAS COMPACTAS */
     height: 70px;
     padding: 0 2rem;
-    /* Padding solo a los lados, la altura la controla 'height' */
     display: flex;
     align-items: center;
 }
@@ -28,27 +23,33 @@
     margin: 0 auto;
 }
 
-.logo {
-    font-weight: 800;
-    font-size: 1.3rem;
-    /* Tamaño controlado */
-    letter-spacing: -0.5px;
-    background: linear-gradient(90deg, #00f3ff, #bd00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;
+/* --- NUEVOS ESTILOS PARA EL LOGO DE IMAGEN --- */
+.logo-container {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    /* Quita el subrayado del Link */
+    cursor: pointer;
 }
 
-.logo span {
-    font-size: 1.8rem;
-    line-height: 0;
-    color: #fff;
-    -webkit-text-fill-color: #fff;
-    margin-top: -5px;
+.logo-img {
+    height: 50px;
+    /* Altura fija para que se vea bien en el navbar */
+    width: auto;
+    /* El ancho se ajusta automáticamente */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Efecto al pasar el mouse por el logo */
+.logo-container:hover .logo-img {
+    transform: scale(1.05);
+    /* Crece un poquito */
+    filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.6));
+    /* Brillo cian */
+}
+
+
+/* --- ESTILOS DE LOS ENLACES (Sin cambios mayores) --- */
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -58,7 +59,6 @@
     text-decoration: none;
     color: #fff;
     font-size: 0.85rem;
-    /* Texto fino y elegante */
     opacity: 0.7;
     font-family: monospace;
     transition: all 0.3s ease;
@@ -73,7 +73,6 @@
 
 .menu-toggle {
     display: none;
-    /* Oculto en PC */
     font-size: 1.5rem;
     color: white;
     cursor: pointer;
@@ -83,37 +82,33 @@
 @media (max-width: 768px) {
     .tech-header {
         height: 60px;
-        /* Más delgado en celular */
         padding: 0 1.5rem;
+    }
+
+    /* Ajustamos un poco el tamaño del logo en móvil */
+    .logo-img {
+        height: 40px;
     }
 
     .menu-toggle {
         display: block;
-        /* Aparece el botón */
     }
 
-    /* Menú desplegable móvil */
     .nav-links {
         position: absolute;
         top: 60px;
-        /* Justo debajo del header */
         left: 0;
         width: 100%;
         background: rgba(10, 10, 15, 0.98);
-        /* Fondo casi negro sólido */
         border-bottom: 1px solid rgba(0, 243, 255, 0.2);
-
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
         gap: 2rem;
-
-        /* Estado cerrado */
         display: none;
         opacity: 0;
     }
 
-    /* Estado abierto (cuando isOpen es true) */
     .nav-links.open {
         display: flex;
         opacity: 1;
@@ -122,12 +117,10 @@
 
     .nav-links a {
         font-size: 1.1rem;
-        /* Letra más grande para tocar con el dedo */
         opacity: 1;
     }
 }
 
-/* Animación de apertura suave */
 @keyframes slideDown {
     from {
         opacity: 0;
