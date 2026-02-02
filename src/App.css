@@ -40,10 +40,10 @@
 .read-the-docs {
   color: #888;
 }
-/* --- BOTÓN DE CONTRATAR PLAN --- */
+
 .btn-hire {
   display: block;
-  /* Para que ocupe el ancho disponible si queremos */
+
   width: 100%;
   padding: 0.8rem;
   margin-top: 1.5rem;
@@ -59,16 +59,16 @@
   cursor: pointer;
 }
 
-/* Efecto Hover (al pasar el mouse) */
+
 .btn-hire:hover {
   background: var(--neon-cyan, #00f3ff);
   color: #000;
-  /* Letras negras para contraste */
+
   box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
   transform: translateY(-3px);
 }
 
-/* Variación Púrpura (para planes más caros) */
+
 .btn-hire.purple {
   border-color: #bd00ff;
   color: #bd00ff;
@@ -79,9 +79,7 @@
   color: #fff;
   box-shadow: 0 0 20px rgba(189, 0, 255, 0.6);
 }
-/* ... Tus otros botones hire ... */
 
-/* Variación VERDE (Matrix / Hacker) */
 .btn-hire.green {
   border-color: #00ff41;
   color: #00ff41;
@@ -91,4 +89,12 @@
   background: #00ff41;
   color: #000;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+}
+
+.flama-neon-3d {
+  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.6)) drop-shadow(0px 0px 10px rgba(255, 87, 34, 0.9));
+  margin-right: 8px;
+  
+  vertical-align: middle;
+
 }

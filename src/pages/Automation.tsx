@@ -16,7 +16,7 @@ const Automation = () => {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           
-          {/* PACK 1: LUCES (Color CIAN) */}
+        
           <TechCard title="Pack Iluminación Led" variant="cyan">
             <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '1rem' }}>
               $45.000 <span style={{ fontSize: '1rem', color: '#888' }}>/ inst</span>
@@ -38,7 +38,7 @@ const Automation = () => {
             </a>
           </TechCard>
 
-          {/* PACK 2: PERSIANAS (Color PÚRPURA) */}
+         
           <TechCard title="Motorización Persianas" variant="purple">
             <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '1rem' }}>
               $65.000 <span style={{ fontSize: '1rem', color: '#888' }}>/ unidad</span>
@@ -60,7 +60,7 @@ const Automation = () => {
             </a>
           </TechCard>
 
-          {/* PACK 3: CEREBRO HOGAR (Color VERDE) */}
+          
           <TechCard title="Hub Central Google" variant="green">
             <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '1rem' }}>
               Cotizar

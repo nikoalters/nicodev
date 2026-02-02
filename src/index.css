@@ -3,19 +3,19 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* Paleta Ultra Tech */
+  
   --bg-deep: #050505;
-  /* Negro casi puro */
+ 
   --bg-glass: rgba(20, 20, 30, 0.6);
-  /* Vidrio oscuro */
+  
   --neon-cyan: #00f3ff;
-  /* Cian eléctrico */
+  
   --neon-purple: #bd00ff;
-  /* Morado láser */
+ 
   --text-main: #ffffff;
   --text-dim: #a0a0b0;
 
-  /* Efecto Borde Brillante */
+
   --border-glow: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -23,16 +23,16 @@ body {
   margin: 0;
   background-color: var(--bg-deep);
   color: var(--text-main);
-  /* Fondo tecnológico sutil */
+
   background-image:
     radial-gradient(circle at 10% 20%, rgba(189, 0, 255, 0.1) 0%, transparent 20%),
     radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.1) 0%, transparent 20%);
   background-attachment: fixed;
-  /* El fondo se queda quieto al hacer scroll */
+ 
   overflow-x: hidden;
 }
 
-/* Scrollbar futurista */
+
 ::-webkit-scrollbar {
   width: 8px;
 }

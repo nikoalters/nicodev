@@ -1,15 +1,15 @@
-/* Contenedor principal de la tarjeta */
+
 .tech-card-container {
     position: relative;
     border-radius: 16px;
     background: rgba(20, 20, 25, 1);
-    /* Fondo oscuro base */
+    
     overflow: hidden;
-    /* Para que el brillo no se salga */
+   
     display: flex;
     flex-direction: column;
     padding: 3px;
-    /* Este espacio es el GROSOR del borde brillante */
+    
     transition: transform 0.3s ease;
     height: 100%;
 }
@@ -18,7 +18,7 @@
     transform: translateY(-5px);
 }
 
-/* --- LA MAGIA: El borde giratorio --- */
+
 .tech-card-container::before {
     content: "";
     position: absolute;
@@ -30,14 +30,14 @@
             transparent,
             transparent,
             var(--card-color)
-            /* El color final del brillo */
+           
         );
     animation: spin 4s linear infinite;
-    /* La animación de giro */
+    
     z-index: 0;
 }
 
-/* Una segunda capa para suavizar el giro */
+
 .tech-card-container::after {
     content: "";
     position: absolute;
@@ -51,11 +51,11 @@
             var(--card-color));
     animation: spin 4s linear infinite;
     animation-delay: -2s;
-    /* Desfase para que se vea continuo */
+   
     z-index: 0;
 }
 
-/* Animación de rotación */
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -66,25 +66,25 @@
     }
 }
 
-/* --- El contenido INTERNO (Tapa oscura) --- */
+
 .tech-card-inner {
     background: rgba(10, 10, 12, 0.95);
-    /* El fondo real de la tarjeta */
+    
     border-radius: 14px;
-    /* Un poco menos que el padre */
+    
     position: relative;
     z-index: 1;
-    /* Para estar encima del brillo */
+   
     height: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centrar todo */
+   
     text-align: center;
 }
 
-/* Títulos y Textos */
+
 .tech-card-title {
     color: #fff;
     font-size: 1.5rem;
@@ -100,8 +100,7 @@
     width: 100%;
 }
 
-/* --- COLORES ESPECÍFICOS --- */
-/* Estas clases las usaremos en el componente */
+
 .card-cyan {
     --card-color: #00f3ff;
 }

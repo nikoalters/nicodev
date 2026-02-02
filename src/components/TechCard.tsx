@@ -3,20 +3,20 @@ import './TechCard.css';
 
 interface TechCardProps {
   children: ReactNode;
-  title?: string;
+  title?: ReactNode;
   className?: string;
   style?: CSSProperties;
-  variant?: 'cyan' | 'purple' | 'green'; // <--- Nueva propiedad de color
+  variant?: 'cyan' | 'purple' | 'green'; 
 }
 
 const TechCard = ({ children, title, className = "", style, variant = 'cyan' }: TechCardProps) => {
-  // Asignamos la clase de color basada en la variante
+ 
   const colorClass = `card-${variant}`;
 
   return (
     <div className={`tech-card-container ${colorClass} ${className}`} style={style}>
       
-      {/* Contenedor interno (la tapa oscura) */}
+     
       <div className="tech-card-inner">
         {title && <h3 className="tech-card-title">{title}</h3>}
         

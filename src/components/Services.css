@@ -1,7 +1,5 @@
-/* ... el resto del archivo sigue igual ... */
-
 .section-title {
-    /* Reduje de 3rem a 2.2rem */
+    
     font-size: 2.2rem;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -15,12 +13,11 @@
 
 .services-grid {
     display: grid;
-    /* Ajusté el minmax a 280px para que quepan mejor */
+    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1100px;
-    /* Limita el ancho total */
+    
     margin: 0 auto;
 }
 
-/* ... el resto sigue igual ... */

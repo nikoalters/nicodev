@@ -7,15 +7,15 @@ const Footer = () => {
     <footer className="tech-footer">
       <div className="footer-content">
         
-        {/* Marca / Logo */}
+       
         <div className="footer-brand">
           <span className="neon-text">NICODEV_</span>
           <p className="footer-tagline">Code. Create. Innovate.</p>
         </div>
 
-        {/* Enlaces Sociales Estilizados */}
+  
         <div className="footer-links">
-          {/* Reemplaza con tus links reales */}
+        
           <a href="https://github.com" target="_blank" rel="noreferrer" className="tech-link">
             GITHUB
           </a>
@@ -27,7 +27,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Copyright */}
+      
         <div className="footer-copyright">
           <p>
             © {currentYear} Nico Soto. 

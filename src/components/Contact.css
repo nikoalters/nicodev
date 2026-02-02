@@ -6,7 +6,7 @@
 
 .contact-container {
     max-width: 700px;
-    /* Que no sea tan ancho para que se vea elegante */
+    
     margin: 0 auto;
 }
 
@@ -25,11 +25,11 @@
 @media (min-width: 768px) {
     .contact-actions {
         flex-direction: row;
-        /* En PC los ponemos uno al lado del otro */
+   
     }
 }
 
-/* Botón WhatsApp */
+
 .btn-whatsapp {
     background: rgba(37, 211, 102, 0.1);
     border: 1px solid #25D366;
@@ -52,7 +52,7 @@
     transform: translateY(-3px);
 }
 
-/* Botón Email */
+
 .btn-email {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);

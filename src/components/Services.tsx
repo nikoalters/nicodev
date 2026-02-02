@@ -1,6 +1,6 @@
 import './Services.css';
 import TechCard from './TechCard';
-import { Link } from 'react-router-dom'; // <--- Ahora sí lo usaremos abajo
+import { Link } from 'react-router-dom'; 
 
 const Services = () => {
   const servicesData = [
@@ -8,7 +8,7 @@ const Services = () => {
       title: "Desarrollo Web & Apps",
       icon: "💻", 
       description: "Sitios web modernos y tiendas online.",
-      link: "/web", // <--- Esta es la ruta a la página de precios Web
+      link: "/web", 
           details: ["Ver Precios Landing Pages", "Ver Planes E-commerce"],
       color: "cyan" as const
     },
@@ -16,7 +16,7 @@ const Services = () => {
       title: "Soporte Técnico & OS",
       icon: "🛠️",
       description: "Mantenimiento y formateo.",
-      link: "/soporte", // <--- Ruta a la página de Soporte
+      link: "/soporte", 
         details: ["Ver Costo Formateo", "Instalación Office"],
       color: "purple" as const
     },
@@ -24,7 +24,7 @@ const Services = () => {
       title: "Automatización & IoT",
   icon: "🤖",
   description: "Soluciones inteligentes.",
-  link: "/automatizacion", // <--- AQUI CAMBIAMOS LA RUTA
+  link: "/automatizacion", 
         details: ["Control de Persianas", "Luces LED Wifi", "Google Home"],
   color: "green" as const
     }
@@ -38,7 +38,7 @@ const Services = () => {
       <div className="services-grid">
         {servicesData.map((service, index) => (
           
-          /* AQUÍ ESTÁ LA CLAVE: Usamos <Link> para envolver la tarjeta */
+         
           <Link to={service.link} key={index} style={{ textDecoration: 'none' }}>
             
             <TechCard title={service.title} className="clickable-card">
@@ -54,7 +54,7 @@ const Services = () => {
                 ))}
               </ul>
 
-              {/* Texto visual que indica que es clickeable */}
+             
               <div style={{ 
                 marginTop: '1rem', 
                 color: '#00f3ff', 

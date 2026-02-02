@@ -14,7 +14,7 @@ const Contact = () => {
           </p>
 
           <div className="contact-actions">
-            {/* Botón WhatsApp */}
+       
             <a 
               href="https://wa.me/56958547236" 
               target="_blank" 
@@ -25,7 +25,7 @@ const Contact = () => {
               +56 9 5854 7236
             </a>
 
-            {/* Botón Email */}
+            
             <a 
               href="mailto:niko.alters@gmail.com" 
               className="btn-email"

@@ -3,22 +3,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Reduje el padding superior de 8rem a 6rem */
+  
     padding: 6rem 2rem 3rem;
     min-height: 85vh;
-    /* Un poco menos de altura para que quepa mejor */
+   
     position: relative;
     max-width: 1100px;
-    /* IMPORTANTE: Esto evita que se estire infinito a los lados */
+ 
     margin: 0 auto;
-    /* Esto lo centra */
+   
 }
 
 @media (min-width: 768px) {
     .hero-container {
         flex-direction: row;
         gap: 3rem;
-        /* Menos espacio entre texto y tarjeta */
+      
         padding: 5rem 2rem;
         text-align: left;
     }
@@ -34,9 +34,9 @@
     }
 }
 
-/* Efecto de Texto Brillante */
+
 .hero-content h1 {
-    /* Reduje de 3.5rem a 2.8rem */
+   
     font-size: 2.8rem;
     font-weight: 800;
     letter-spacing: -1px;
@@ -45,7 +45,7 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
     line-height: 1.2;
-    /* Para que las líneas no se separen tanto */
+   
 }
 
 .highlight {
@@ -56,7 +56,7 @@
 
 .hero-content h2 {
     font-family: 'Courier New', monospace;
-    /* Reduje de 1.2rem a 1rem */
+    
     font-size: 1rem;
     color: var(--neon-purple);
     margin-bottom: 1.5rem;
@@ -66,16 +66,16 @@
 
 .hero-content p {
     font-size: 1rem;
-    /* Texto un pelín más chico */
+
     color: #a0a0b0;
-    /* Usar el gris tech directo */
+    
     max-width: 450px;
-    /* Limita el ancho del párrafo para que no se vea eterno */
+   
     line-height: 1.6;
     margin-bottom: 2rem;
 }
 
-/* Botones High Tech */
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -83,7 +83,7 @@
 
 .btn {
     padding: 0.8rem 1.5rem;
-    /* Botones un poco más compactos */
+
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
@@ -118,17 +118,17 @@
     color: white;
 }
 
-/* Ajuste específico para que la tarjeta de la derecha no sea gigante */
+
 .hero-showcase {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* En móvil centrada */
+    
 }
 
 @media (min-width: 768px) {
     .hero-showcase {
         justify-content: flex-end;
-        /* En PC a la derecha */
+      
     }
 }
