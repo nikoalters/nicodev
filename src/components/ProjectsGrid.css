@@ -1,0 +1,50 @@
+.projects-grid-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, transparent, rgba(0, 243, 255, 0.03));
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.project-simple-card {
+    background: rgba(20, 20, 30, 0.8);
+    border: 1px solid rgba(0, 243, 255, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.project-simple-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(189, 0, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(189, 0, 255, 0.1);
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    color: #00f3ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.project-simple-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.project-simple-card p {
+    color: #a0a0b0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}

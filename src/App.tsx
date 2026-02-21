@@ -8,6 +8,8 @@ import Automation from './pages/Automation';
 import Footer from './components/Footer';
 import WebDev from './pages/WebDev';
 import Support from './pages/Support';
+import TechStack from './components/TechStack';
+import ProjectsGrid from './components/ProjectsGrid';
 
 
 const Home = () => {
@@ -16,6 +18,8 @@ const Home = () => {
       <Navbar />
       <main>
         <Hero />
+        <TechStack />
+<ProjectsGrid />
         <Services />
         <Contact />
       </main>

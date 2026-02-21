@@ -1,0 +1,39 @@
+.tech-stack-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-badge {
+    background: rgba(20, 20, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+/* El efecto neón flotante al pasar el mouse */
+.skill-badge:hover {
+    transform: translateY(-5px);
+    border-color: var(--hover-color);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5),
+        0 0 15px var(--hover-color) inset;
+    text-shadow: 0 0 8px var(--hover-color);
+}
