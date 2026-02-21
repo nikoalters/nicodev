@@ -18,9 +18,10 @@ const Home = () => {
       <Navbar />
       <main>
         <Hero />
+        <Services />
         <TechStack />
 <ProjectsGrid />
-        <Services />
+        
         <Contact />
       </main>
       <Footer />
