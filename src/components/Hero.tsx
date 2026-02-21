@@ -2,9 +2,7 @@ import './Hero.css';
 import TechCard from './TechCard';
 
 const Hero = () => {
-  // CORRECCIÓN VERCEL 1: 
-  // En lugar de usar import.meta.env.BASE_URL, llamamos a la imagen 
-  // directamente desde la raíz (ya que está en la carpeta public).
+  // Ruta limpia para que Vercel encuentre la imagen en la carpeta public
   const placeholderImage = `/perfumes-preview.jpg`;
 
   return (
@@ -17,13 +15,29 @@ const Hero = () => {
           hasta soporte técnico especializado.
         </p>
         
-        {/* CORRECCIÓN BOTONES: 
-            Asegúrate de que 'btn' y 'btn-primary'/'btn-outline' existan en tu Hero.css.
-            Los href apuntan a los IDs de las otras secciones.
-        */}
+        {/* Botones principales con el Fix del Scroll Suave */}
         <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-          <a href="#servicios" className="btn btn-primary">Mis Servicios</a>
-          <a href="#contacto" className="btn btn-outline">Contáctame</a>
+          <a 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' });
+            }} 
+            className="btn btn-primary"
+            style={{ cursor: 'pointer' }}
+          >
+            Mis Servicios
+          </a>
+          
+          <a 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+            }} 
+            className="btn btn-outline"
+            style={{ cursor: 'pointer' }}
+          >
+            Contáctame
+          </a>
         </div>
       </div>
 
@@ -33,7 +47,7 @@ const Hero = () => {
           style={{ maxWidth: '450px' }}
           title={
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              {/* LA FLAMITA 3D */}
+              {/* Flamita 3D */}
               <svg 
                 className="flama-neon-3d" 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -81,7 +95,7 @@ const Hero = () => {
               E-commerce moderno desarrollado con React. Carrito de compras, catálogo dinámico y diseño responsive.
             </p>
 
-            {/* Botón de Acción a la tienda en vivo */}
+            {/* Botón a tu proyecto externo */}
             <a 
               href="https://frontend-perfumes-two.vercel.app/" 
               target="_blank" 
