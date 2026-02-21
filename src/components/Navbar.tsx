@@ -9,26 +9,27 @@ const Navbar = () => {
     <header className="tech-header">
       <nav className="tech-nav">
       
+        {/* LOGO ARREGLADO: Solo la barra al inicio */}
         <Link to="/" className="logo-container" onClick={() => window.scrollTo(0, 0)}>
           <img 
-            src="/nicodev/logo-nicodev.png" 
+            src="/logo-nicodev.png" 
             alt="Logo Nicodev" 
             className="logo-img"
           />
         </Link>
 
-      
+        {/* Botón Hamburguesa */}
         <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? '✕' : '☰'}
         </div>
 
-       
+        {/* ENLACES ARREGLADOS: Apuntan directo al ID de la sección */}
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-       
-          <a href="/nicodev/#inicio" onClick={() => setIsOpen(false)}>// INICIO</a>
-          <a href="/nicodev/#servicios" onClick={() => setIsOpen(false)}>// SERVICIOS</a>
-          <a href="/nicodev/#contacto" onClick={() => setIsOpen(false)}>// CONTACTO</a>
+          <a href="#inicio" onClick={() => setIsOpen(false)}>// INICIO</a>
+          <a href="#servicios" onClick={() => setIsOpen(false)}>// SERVICIOS</a>
+          <a href="#contacto" onClick={() => setIsOpen(false)}>// CONTACTO</a>
         </div>
+        
       </nav>
     </header>
   );
